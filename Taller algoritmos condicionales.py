@@ -7,7 +7,7 @@ Created on Sun Sep 12 16:53:05 2021
 
 #Taller de algoritmos condicionales
 
-# 1. Hacer un algoritmo que calcule el total a pagar por la
+# 1.Hacer un algoritmo que calcule el total a pagar por la
 #compra de camisas. Si se compran tres camisas o mas se
 #aplica un descuento del 30% sobre el total de la compra 
 #y si son menos de tres camisas un descuento del 10%.
@@ -15,11 +15,13 @@ print("1/ Total a pagar por compra de camisas")
 cantCamisas = int(input("Ingrese numero de camisas vendidas: "))
 precioCamisas = int(input("Ingrese precio de las camisas: "))
 valorDesc = 0.3
-if (cantCamisas >= 3):
+if (cantCamisas > 0 and cantCamisas >= 3):
     descuento = int((cantCamisas * precioCamisas)* valorDesc)
     total = (cantCamisas * precioCamisas)-descuento
 elif (cantCamisas < 3):
     total = (cantCamisas*precioCamisas)
+else:
+    print("Ingrese un numero mayor que 0")
 print("El total a pagar es: ",total)
 print("")
 
@@ -33,10 +35,12 @@ totalCompra = int(input("Ingrese el monto total de la compra: "))
 numeroAzar = int(input("Ingrese el numero escogido al azar: "))
 descuentoA = 0.15
 descuentoB = 0.2
-if (numeroAzar < 74):
+if (numeroAzar > 0 and numeroAzar < 74):
     descuentoTotal = totalCompra * descuentoA
 elif (numeroAzar >= 74):
     descuentoTotal = totalCompra * descuentoB
+else:
+    print("Ingrese un numero mayor que 0")
 print("El descuento total de la compra es: ",descuentoTotal)
 print("")
 
@@ -52,10 +56,12 @@ print("3/ Cual es la cuota que debe pagar el cliente")
 montoSolicitado = int(input("Ingrese el monto a pedir: "))
 fianzaA = 0.03
 fianzaB = 0.02
-if (montoSolicitado < 50000):
+if (montoSolicitado > 0 and montoSolicitado < 50000):
     total = montoSolicitado + (montoSolicitado*fianzaA)
 elif (montoSolicitado >= 50000):
     total = montoSolicitado + (montoSolicitado*fianzaB)
+else:
+    print("Ingrese un numero mayor que 0")
 print("La cuota a pagar al cliente es: ",total)
 print("")
 
@@ -79,10 +85,12 @@ for i in range(5):
     dineroProduccion += int(input(f"Ingrese cuanto dinero gano la fabrica el dia {i+1}: $"))
     aux += int(input(f"Ingrese los puntos de contaminacion generados el dia {i+1}: "))
 prom = aux/5
-if (prom > 170):
+if (prom > 0 and prom > 170):
     totalPerdida = dineroProduccion * multa
 elif (prom <= 170):
     totalPerdida = 0
+else:
+    print("Ingrese un numero mayor que 0")
 print(f"La fabrica perdio ${totalPerdida} despues de la revision")
 print("")
 
@@ -106,3 +114,32 @@ if (incremento/2 > decremento):
 else:
     print("No debe comprar el automovil")
 print("")
+
+# 6. En una fábrica de computadoras se planea ofrecer a
+#los clientes un descuento que dependerá del número de
+#computadoreas que compre. Si las computadoras son menos
+#de cinco se les dará un 10% de descuento sobre el total
+#de la compra; si el número de computadoras es mayor o
+#igual a cinco pero menos de diez se le otorga un 20% de
+#descuento; y si son 10 o más se les da un 40%. El
+#precio de cada computadora es de $11.000.
+print("6/ Descuento de los computadores")
+valorUnitario = 11000
+cantComputador = int(input("Ingrese la cantidad de computadores: "))
+if (cantComputador > 0 and cantComputador < 5):
+    valorT = valorUnitario * cantComputador
+    descuentoT = valorT * 0.1
+    totalP = valorT - descuentoT
+elif (cantComputador >= 5 and cantComputador < 10):
+    valorT = valorUnitario * cantComputador
+    descuentoT = valorT * 0.2
+    totalP = valorT - descuentoT
+elif (cantComputador >= 10):
+    valorT = valorUnitario * cantComputador
+    descuentoT = valorT * 0.4
+    totalP = valorT - descuentoT
+else:
+    print("Ingrese un numero mayor que 0")
+print(f'El descuento es de ${descuentoT}, el total a pagar es ${totalP} ')
+print("")
+        
