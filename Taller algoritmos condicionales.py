@@ -58,3 +58,30 @@ elif (montoSolicitado >= 50000):
     total = montoSolicitado + (montoSolicitado*fianzaB)
 print("La cuota a pagar al cliente es: ",total)
 print("")
+
+# 4. Una fábrica ha sido sometida a un programa de control
+#de contaminación para lo cual se efectúa una revisión de
+#los puntos de contaminación generados por la fábrica. El
+#programa de control de contaminación consiste en medir los
+#puntos que emite la fábrica en cinco días de una semana y
+#si el promedio es superior a los 170 puntos entonces
+#tendrá la sanción de parar su producción por una semana y
+#una multa del 50% de las ganancias diarias cuando no se
+#detiene la producción. Si el promedio obtenido de puntos
+#es de 170 o menos entonces no tendrá ni sanción ni multa.
+#El dueño de la fábrica desea saber cuanto dinero perderá
+#después de ser sometido a la revisión.
+print("4/ Cuanto dinero perdera la fabrica despues de la revision")
+multa = 0.5
+aux = 0
+dineroProduccion = 0
+for i in range(5):
+    dineroProduccion += int(input(f"Ingrese cuanto dinero gano la fabrica el dia {i+1}: $"))
+    aux += int(input(f"Ingrese los puntos de contaminacion generados el dia {i+1}: "))
+prom = aux/5
+if (prom > 170):
+    totalPerdida = dineroProduccion * multa
+elif (prom <= 170):
+    totalPerdida = 0
+print(f"La fabrica perdio ${totalPerdida} despues de la revision")
+    
