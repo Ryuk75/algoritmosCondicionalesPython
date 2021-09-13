@@ -84,4 +84,25 @@ if (prom > 170):
 elif (prom <= 170):
     totalPerdida = 0
 print(f"La fabrica perdio ${totalPerdida} despues de la revision")
-    
+print("")
+
+# 5.Una persona se encuentra con un problema de comprar un
+#automóvil o un terreno, los cuales cuestan exactamente lo
+#mismo. Sabe que mientras el automóvil se devalúa, con el
+#terreno sucede lo contrario. Esta persona comprará el
+#automóvil si al cabo de tres años la devaluación de este
+#no es mayor que la mitad del incremento del valor del
+#terreno. Ayúdale a esta persona a determinar si debe o no
+#comprar el automóvil. 
+print("5/ Determinar si debe o no comprar el automovil")
+precioCarro = int(input('Ingrese el precio del Carro: '))
+precioTerreno = int(input('Ingrese el precio del Terreno: '))
+incrementoAnual = int(input('Ingrese el porcentaje de incremento anual del terreno: '))
+devaluacionAnual = int(input('Ingrese el porcentaje de devaluacion anual del carro: '))
+incremento = ((precioTerreno * incrementoAnual)/ 100)*3
+decremento = ((precioCarro * devaluacionAnual)/100)*3
+if (incremento/2 > decremento):
+    print("Debe comprar el automovil")
+else:
+    print("No debe comprar el automovil")
+print("")
