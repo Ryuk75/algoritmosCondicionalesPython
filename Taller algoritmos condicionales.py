@@ -103,10 +103,10 @@ print("")
 #terreno. Ayúdale a esta persona a determinar si debe o no
 #comprar el automóvil. 
 print("5/ Determinar si debe o no comprar el automovil")
-precioCarro = int(input('Ingrese el precio del Carro: '))
-precioTerreno = int(input('Ingrese el precio del Terreno: '))
-incrementoAnual = int(input('Ingrese el porcentaje de incremento anual del terreno: '))
-devaluacionAnual = int(input('Ingrese el porcentaje de devaluacion anual del carro: '))
+precioCarro = int(input("Ingrese el precio del Carro: "))
+precioTerreno = int(input("Ingrese el precio del Terreno: "))
+incrementoAnual = int(input("Ingrese el porcentaje de incremento anual del terreno: "))
+devaluacionAnual = int(input("Ingrese el porcentaje de devaluacion anual del carro: "))
 incremento = ((precioTerreno * incrementoAnual)/ 100)*3
 decremento = ((precioCarro * devaluacionAnual)/100)*3
 if (incremento/2 > decremento):
@@ -140,7 +140,7 @@ elif (cantComputador >= 10):
     totalP = valorT - descuentoT
 else:
     print("Ingrese un numero mayor que 0")
-print(f'El descuento es de ${descuentoT}, el total a pagar es ${totalP} ')
+print(f"El descuento es de ${descuentoT}, el total a pagar es ${totalP}")
 print("")
 
 # 7.Un proveedor de estéreos ofrece un descuento del 10%
@@ -183,21 +183,36 @@ print("")
 #crédito. Obtener la cantidad a inverir, valor del
 #préstamo, valor del crédito y los intereses.
 print("8/ Obtener la cantidad a invertir, valor del préstamo, valor del crédito y los intereses.")
-cantidadI = int(input('Ingrese la cantidad a invertir: '))
+cantidadI = int(input("Ingrese la cantidad a invertir: "))
 if cantidadI > 500000:
     inversion = (cantidadI * 0.55)
     prestamo = (cantidadI * 0.3)
     prestamoFabrica = (cantidadI *0.15)
     interes = (prestamoFabrica * 0.2)
-    print(f'La cantidad a invertir es ${inversion}')
-    print(f'La cantidad a prestamo al banco es ${prestamo}')
-    print(f'El prestamo a la fabrica es ${prestamoFabrica}')
-    print(f'Los intereses son: ${interes}')
+    print(f"La cantidad a invertir es ${inversion}")
+    print(f"La cantidad a prestamo al banco es ${prestamo}")
+    print(f"El prestamo a la fabrica es ${prestamoFabrica}")
+    print(f"Los intereses son: ${interes}")
 elif cantidadI <= 500000:
     inversion = (cantidadI * 0.7)
     prestamoFabrica = (cantidadI *0.3)
     interes = (prestamoFabrica * 0.2)
-    print(f'La cantidad a invertir es ${inversion}')
-    print(f'El prestamo a la fabrica es ${prestamoFabrica}')
-    print(f'Los intereses son: ${interes}')
+    print(f"La cantidad a invertir es ${inversion}")
+    print(f"El prestamo a la fabrica es ${prestamoFabrica}")
+    print(f"Los intereses son: ${interes}")
+print("")
+
+# 9. Leer 2 números; si son iguales que lo multiplique, si
+#el primero es mayor que el segundo que los reste y sino
+#que los sume.
+print("9/ Lea 2 numeros y haga operaciones entre ellos")
+n1 = int(input("Ingrese el primer numero: "))
+n2 = int(input("Ingrese el segundo numero: "))
+if (n1 == n2):
+    resultado = n1 * n2
+elif (n1 > n2):
+    resultado = n1 - n2
+elif (n1 < n2):
+    resultado = n1 + n2
+print("El resultado es: ",resultado)
 print("")
