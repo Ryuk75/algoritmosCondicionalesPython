@@ -25,10 +25,9 @@ print("")
 
 # 2. En un supermercado se hace una promoción, mediante la
 #cual el cliente obtiene un descuento dependiendo de un
-#número que se escoge al azar. Si el número escogido es menor
-#que 74 el descuento es del 15% sobre el total de la compra,
-#si es mayor o igual a 74 el descuento es del 20%. Obtener
-#cuanto dinero se le descuenta.
+#número que se escoge al azar. Si el número escogido es
+#menor que 74 el descuento es del 15% sobre el total de la
+#compra, si es mayor o igual a 74 el descuento es del 20%. #Obtener cuanto dinero se le descuenta.
 print("2/ Cuanto dinero se le descuenta a un cliente")
 totalCompra = int(input("Ingrese el monto total de la compra: "))
 numeroAzar = int(input("Ingrese el numero escogido al azar: "))
@@ -39,4 +38,23 @@ if (numeroAzar < 74):
 elif (numeroAzar >= 74):
     descuentoTotal = totalCompra * descuentoB
 print("El descuento total de la compra es: ",descuentoTotal)
+print("")
+
+# 3. Una compañía de seguros está abriendo un departamento
+#de finanzas y estableció un programa para captar clientes,
+#que consiste en lo siguiente: Si el monto por el que se
+#efectúa la fianza es menor que $50.000 la cuota a pagar
+#será por el 3% del monto, y si el monto es mayor que
+#$50.000 la cuota a pagar será el 2% del monto. La
+#afianzadora desea determinar cual será la cuota que debe
+#pagar al cliente.
+print("3/ Cual es la cuota que debe pagar el cliente")
+montoSolicitado = int(input("Ingrese el monto a pedir: "))
+fianzaA = 0.03
+fianzaB = 0.02
+if (montoSolicitado < 50000):
+    total = montoSolicitado + (montoSolicitado*fianzaA)
+elif (montoSolicitado >= 50000):
+    total = montoSolicitado + (montoSolicitado*fianzaB)
+print("La cuota a pagar al cliente es: ",total)
 print("")
