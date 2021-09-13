@@ -142,4 +142,27 @@ else:
     print("Ingrese un numero mayor que 0")
 print(f'El descuento es de ${descuentoT}, el total a pagar es ${totalP} ')
 print("")
-        
+
+# 7.Un proveedor de estéreos ofrece un descuento del 10%
+#sobre el precio sin IVA, de algún aparato si este cuesta
+#$2000 o más. Además, independientemente de esto, ofrece
+#un 5% de descuento si la marca es NOSY. Determinar cuanto
+#pagará, con IVA incluido, un cliente cualquiera por la
+#compra de su aparato. IVA es del 16%.
+print("7/ Determinar cuanto pagara con IVA incluido")
+precioEstereo = int(input("Ingrese el precio del estereo: "))
+marcaEstereo = input("Ingrese el nombre de la marca del estereo: ")
+iva = 0.16
+if(precioEstereo >= 2000):
+    if(marcaEstereo == 'nosy' or marcaEstereo == 'Nosy' or marcaEstereo == 'NOSY'):
+        descEstereo = (precioEstereo*0.15)
+    else:
+        descEstereo = (precioEstereo*0.1)
+    subtotal = precioEstereo - descEstereo
+    totalE = subtotal + (subtotal*iva)
+elif(precioEstereo > 0 and precioEstereo < 2000):
+    totalE = precioEstereo + (precioEstereo*iva)
+else:
+    print("Ingrese un numero mayor que 0")
+print(f"El precio total a pagar por el estereo es: ${totalE}")
+print("")
